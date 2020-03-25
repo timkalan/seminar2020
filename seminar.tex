@@ -25,7 +25,7 @@
 Ob obsegu današnjega trga in vseh možnostih, ki jih ponuja, se je morda smiselno vprašati,
 zakaj bi investitor sploh trgoval z finančnimi instrumenti o obrestni meri. Pojavijo se trije
 glavni razlogi: Prvič, tipično je trgovanje na trgu obrestnih mer cenejše in posledično nas 
-stane manj, da preko obrestnih mer omilimo tveganje. Prav tako lahko hitreje prilagajamo svoj 
+stane manj, da preko obrestnih mer omilimo tveganje. Prav tako lahko tipično hitreje prilagajamo svoj 
 portfelj. Zadnji pomemben razlog pa je, da se obresne mere manj odzovejo na povpraševanje v 
 smislu dviganja njihovih cen (oz. cen poslovanja z njimi), kot alternative na trgu denarja.
 
@@ -61,8 +61,39 @@ Pozicijo lahko zapre tudi na datum izročitve, in sicer tako, da pač izvede svo
 Kupec torej sprejme osnovno premoženje in ga plača po zmenjeni ceni in obratno za prodajalca - 
 ta preda osnovno premoženje in dobi denar. 
 
+Nekatere terminske pogodbe o obrestni meri je mogoče poravnati le z denarjem ali z denarjem 
+enakovredni stvari. Take pogodbe v angleščini imenujemo \textit{cash settlement contracts}.
+
 \subsubsection{Vloga klirinške hiše}
-\subsubsection{Kritje}
+Vsaka borza, kjer se trguje s terminskimi pogodbami in vsaka borza nasploh ima svojo \textbf{
+klirinško hišo}. V tem razdelju si bomo ogledali njene funkcije.
+
+Njena glavna funkcija je, da zagotovi, da bosta obe strani pogodbe izpolnjeni in s tem 
+udeleženim v pogodbi omili skrbi in zmanjša njihovo tveganje. To doseže tako, da kadarkoli
+se pojavi kupec ali prodajalec pogodbe, ona zavzame njegovo nasprotno pozicijo v pogodbi.
+Torej, po prvotnem dogovoru med obema stranema se ona ">vrine"< kot kupec za prodajalca in 
+prodajalec za kupca. To drastično omili skrbi glede nemoči izvedbe obveznosti nasprotne
+strani. 
+
+Prav tako je zaradi klirinške hiše investitorjem bolj enostavno zapreti svoje pozicije, saj 
+jim ni treba vključevati nasprotne strani, saj vsi posli potekajo preko hiše. 
+
+\subsubsection{Zahteve po kritju}
+Da investitor sploh lahkto trguje s terminskimi pogodbami, mora odpreti vzdrževalni račun. 
+Ko sklene pogodbo, je v njej poleg zgoraj naštetih stvari opredeljena še višina začetnega 
+kritja (angl. \textit{initial margin}). To je pač neka količina denarja, ki jo je treba 
+naložiti kot depozit za pogodbo (spet v vlogi zmanjševanja tveganja). To kritje ni nujno
+v denarju, plačamo lahko namreč tudi s karerimkoli vrednostnim papirjem, ki izplačuje obresti
+(npr. obveznica).
+
+V času med sklenitvijo in iztekom pogodbe, njena cena na trgu niha. Ker trgujemo na organiziranem
+trgu, je ob koncu vsakega trgovalnega dne pogodba vrednostena (angl. \textit{marking-to-market}). 
+Kot kupec pogodbe smo dolžni vzdrževati razliko med stanjem na računu in vzdrževalnim kritjem
+(angl. \textit{maintenance margin}) v primeru neugodnega premika cene in imamo pravico vzeti zase 
+dodatno maržo, če je premik ugoden. 
+
+Dodatnem kritju, ki ga moramo nakazati pravimo variacijsko kritje (angl. \textit{variation margin}) 
+in mora biti nujno v denarju (in ne vrednostnem papirju).
 
 \section{Terminski posli}
 
