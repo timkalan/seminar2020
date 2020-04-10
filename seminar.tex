@@ -129,13 +129,14 @@ se namreč najbolj pogosto trguje v ZDA, ostale države sveta pa so opisane konc
 modelirale svoje trge s tovrstnimi finančnimi instrumenti.
 
 \subsection{Terminske pogodbe na državne obveznice}
-Z njimi se trguje na borzi v Chicagu (\textit{CBOT}). Osnovno premoženje v taki pogodbi je hipotetična
-dvajset-letna kuponska obveznica z vrednostjo \textdollar$100.000$. Kuponski obrestni meri v tem primeru
-pravimo obračunski kupon (angl. \textit{notional coupon}). Pogodbe so kotirane tako, da nominalno vrednost
-obveznice označimo s $100$ (kar pomeni $100\%$ vrednosti). Razlike so potem kotirane v 
-dvaintridesetinah enega procenta. To se tradicionalno označi s 
+Z njimi se trguje na borzi v Chicagu (\textit{CBOT}); zato so tudi veliko bolj popularne v ZDA, kot pri nas.
+Osnovno premoženje v taki pogodbi je hipotetična dvajset-letna kuponska obveznica z vrednostjo 
+\textdollar$100.000$. Kuponski obrestni meri v tem primeru pravimo obračunski kupon (angl. 
+\textit{notional coupon}). Pogodbe so kotirane tako, da nominalno vrednost obveznice označimo s $100$ 
+(kar pomeni $100\%$ vrednosti). Razlike so potem kotirane v dvaintridesetinah enega procenta. To se 
+tradicionalno označi s 
 %
-$$ (celi\:del)-(število\:dvaintridesetin), $$
+$$ celi\:del - število\:dvaintridesetin, $$
 %
 to pomeni, da $97-16$ predstavlja $97,5\%$ nominalne vrednosti. To je potem tudi cena, ki je zapisana v 
 pogodbi.
@@ -143,7 +144,38 @@ pogodbi.
 Na borzi je definirano tudi minimalno odstopanje cene (angl. \textit{minimum price fluctuation}) obveznice
 kot $1/32$ enega procenta, kar se pri dani nominalni vrednosti prevede v \textdollar$31,25.$
 
-\subsubsection{Conversion factors}
+\subsubsection{Hipoterične obveznice}
+Zgoraj smo omenili, da je osnovno premoženje hipotetična obveznica. To je zato, ker ob sklenitvi pogodbe 
+sploh ni potrebno, da kratka stran ima pripravljeno dejansko obveznico za prodajo ob datumu izročitve 
+(vedno obstaja možnost predčasnega zapiranja pozicije). 
+
+Če pa se dejansko odloči za izvedbo, pa mora predati obveznico. Le-to izbere iz množice obveznic, ki jih
+CBOT določi za primerne. Eden izmed pogojev je, da imajo obveznice do datuma zapadlosti na datum izročitve
+vsaj 15 let. 
+
+Ta aspekt je tudi ena izmed najbolj zanimivih stvari pri tej vrsti pogodbe, zato si bomo v nadaljevanju 
+pogledali nekaj detajlov.
+
+% mogoče en primer tukaj; tista tabela iz vira recimo
+
+\subsubsection{Pretvorbeni faktorji}
+Zaradi nenujosti obstoja primerne obveznice, pred prodajo pogodb z določenim datumom zapadlosti CBOT 
+določi pretvorbene faktorje (angl. \textit{conversion factors}), ki naredijo te pogodbe pravične. 
+Odvisni so od dejanske obveznice, ki jo dolga stran da, in od izročitvenega datuma. Če torej prodajalec
+da dejansko bolj donosno obveznico, kot je v pogodbi, bo CBOT tako zagotovil, da vseeno dobi pravično
+ceno (in obratno, če da manj donosno obveznico).
+
+% simpl primer o bolj in manj donosni obveznici
+
+Dejanska cena, ki jo kupec plača (angl. \textit{invoice price}) je tako odvisna od mnogih stvari. 
+Seveda je pomembna izročivena cena, določena v sami pogodbi in ">velikost pogodbe"< (torej število
+obveznic). Zgoraj smo ugotovili, da je pomemben tudi pretvorbeni faktor. V osnovi pa govorimo o 
+instrumentih na obrestne mere, zato ne smemo pozabiti na natečene obresti, ki jih prinaša naše 
+osnovno premoženje. Če povzamemo:
+%
+$$ cena = št.\:obveznic \times K \times pretvorbeni\:faktor + natečene\:obresti $$
+%
+
 \subsubsection{Cheapest-to-deliver issue}
 \subsubsection{Other delivery options}
 \subsubsection{Delivery procedure}
