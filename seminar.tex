@@ -144,7 +144,7 @@ pogodbi.
 Na borzi je definirano tudi minimalno odstopanje cene (angl. \textit{minimum price fluctuation}) obveznice
 kot $1/32$ enega procenta, kar se pri dani nominalni vrednosti prevede v \textdollar$31,25.$
 
-\subsubsection{Hipoterične obveznice}
+\subsubsection{Hipotetične obveznice}
 Zgoraj smo omenili, da je osnovno premoženje hipotetična obveznica. To je zato, ker ob sklenitvi pogodbe 
 sploh ni potrebno, da kratka stran ima pripravljeno dejansko obveznico za prodajo ob datumu izročitve 
 (vedno obstaja možnost predčasnega zapiranja pozicije). 
@@ -198,10 +198,58 @@ Za izračun moramo o obveznici poznati naslednje podake:
 \end{itemize}
 
 Čeprav zadnje točke ne moremo točno poznati, imajo njene podrobnosti majhen učinek na 
-implicirano stopnjo povračila in zato jih lahko zanemarimo. 
+implicirano stopnjo povračila in zato jih lahko zanemarimo. Zato je formula naslednja:
+%
+$$ implicirana\:repo\:stopnja = \frac{donos}{strošek\:investicije} \times
+\frac{360}{dnevi\:do\:izročitve} $$
+%
+Kjer je donos razlika med prejetim izkupičkom ob izročitvenem datumu in stroškom investicije. 
+Izkupiček je torej izročitvena cena terminske pogodbe (ne pozabimo upoštevati pretvorbenega 
+faktorja in natečenih obresti), kuponi, ki jih prejmemo in obresti od reinvesticije kuponov. 
+%
+$$ izkupiček = pretvorjena\:cena + natečene\:obresti + kuponi + obresti $$
+%
+Kjer velja, da obresti ne poznamo točno, pač pa to ocenimo glede na tržne razmere. Pripomnimo
+še, da kupone reinvestiramo za toliko dni, kot mine med njihovim izplačilom in izročitvenim
+datumom in da to v formuli meriomo kot delež leta (t.j. $360$ dni). 
 
-\subsubsection{Other delivery options}
-\subsubsection{Delivery procedure}
+Strošek investicije je pa torej cena obveznice, ki jo kupimo in natečene obresti, ki jih plačamo.
+
+Zadnji ulomek pa je enostavno anualizacija te repo stopnje, saj to nekako standardizira izračun
+in omogoča lažjo primerjavo. 
+
+% tu ponovno lahko pride primer ane
+
+\subsubsection{Izbire pri izročitvi}
+Prodajalec ima ob izročitvi pravico in dolžnost sprejeti nekaj pomembnih odločitev. CBOT mu 
+zagotavlja, da se lahko odloča vsaj glede naslednjih stvari:
+
+\begin{itemize}
+    \item Odločiti se mora, katero izmed primernih obveznic bo izročil. Tej odločitvi v angleščini 
+            rečemo \textit{quality/swap option}
+    \item Izbere lahko, kater dan v izročitvenem mesecu bo izkoristil za dejansko izročitev
+            obveznice - \textit{timing option}.
+    \item Lahko si izbrere, da obveznico preda pred ali po zaprtju borze; tako lahko izbere, če 
+            bo znana končna cena te pogodbe. Ima tudi primerno ime: \textit{wild card option}. 
+\end{itemize}
+
+Zaradi teh odločitev dolga pozicija nikoli tekom pogodbe ne more vedeti točno katero obveznico bo
+dobila, niti ne pozna točnega datuma predaje.
+
+\subsubsection{Proces izročitve}
+Ko se pogodba izteče (oz. si kratka stran izbere datum), prodajalca še vedno čaka 3-dnevni proces 
+izročitve. 
+
+Prvi dan (angl. \textit{position day}) mora do osme ure zvečer po chicaškem času sporočiti na 
+CBOT, da ima namen izročiti. 
+
+Drugi dan (angl. \textit{notice day}) si izbere katero obveznico bo predal. To odločitev mora 
+sprejeti do štirinajste ure. CBOT potem pregleda vse potencialne kupce, izbere tistega, ki 
+ima odprto dolgo pozicijo najdlje in mu do šestnajste ure sporoči, da se bo pogodba izvršila. 
+
+Tretji dan (angl. \textit{delivery day}) se do desete ure izvede dejanska izročitev. Prodajalec 
+mora imeti na računu pripravljeno obveznico, kupec pa denar. 
+
 
 \subsection{Terminske pogodbe na zakladno menico \\ (angl. \textit{treasury note futures})}
 \subsection{Agency note futures contract}
