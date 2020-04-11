@@ -176,7 +176,30 @@ osnovno premoženje. Če povzamemo:
 $$ cena = št.\:obveznic \times K \times pretvorbeni\:faktor + natečene\:obresti $$
 %
 
-\subsubsection{Cheapest-to-deliver issue}
+\subsubsection{Cheapest-to-deliver issue (Obveznica, najcenejša za dostavo?)}
+Zgoraj smo ugotovili, da je možno pri predaji izbirati med različnimi obveznicami, in seveda niso
+vse enakovredne. Želja dolge strani je seveda poiskati najcenejšo (angl. \textit{cheapest-to-deliver
+issue}) in zato je potrebna analiza možnosti. To izvedemo z naslednjim razmislekom:
+
+Istočasno prodamo terminsko pogodbo in z izposojenim denarjem kupimo eno izmed obveznic, ki so 
+primerne za to pogodbo. Na datum izročive potem predamo obveznico in z dobljenim denarjem 
+poplačamo dolg - to imenujemo \textit{cash and carry trade}. S tako situacijo potem poznamo
+dovolj podatkov, da izračunamo stopnjo povračila za tako investicijo, pogosto to imenujemo
+\textbf{implicirana repo stopnja} (angl. \textit{implied repo rate}). To lashko izračiunamo
+za vse primerne obveznice in na koncu izberemo tisto, katere stopja je najvišja. 
+
+Za izračun moramo o obveznici poznati naslednje podake:
+
+\begin{itemize}
+    \item Cen po kateri lahko kupimo obveznico in natečene obresti, ki ji pripradajo,
+    \item Pretvorjeno ceno in natečene obresti, ki jih bomo dobili ob izročitvi, 
+    \item Kupone, ki jih bomo dobili do izročivenega datuma,
+    \item Dobiček od reinvesticije kuponov od njihovega izplačila do datuma izročive.
+\end{itemize}
+
+Čeprav zadnje točke ne moremo točno poznati, imajo njene podrobnosti majhen učinek na 
+implicirano stopnjo povračila in zato jih lahko zanemarimo. 
+
 \subsubsection{Other delivery options}
 \subsubsection{Delivery procedure}
 
