@@ -3,18 +3,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage[slovene]{babel}
 \usepackage{pgfpages} % privat zapiski
+\usepackage{amsmath} % pravilen izpis v "math mode"
 
 %\setbeameroption{hide notes}                        % samo prosojnice
 %\setbeameroption{show only notes}                   % samo zapiski
 \setbeameroption{show notes on second screen=right}  % oboje
-
-% Naj se pojavljajo zaporedoma:
-% \beamerdefaultoverlayspecification{<+->}
-
-% Minimalistični still
-\mode<presentation>
-% \usetheme{Goettingen}
-% \usecolortheme{rose}
 
 \usepackage{palatino}
 \usefonttheme{serif}
@@ -192,25 +185,78 @@
 
 
 \begin{frame}
-    \frametitle{Obveznica, najcenejša za dostavo}
+    \frametitle{Obveznica, najcenejša za poravnavo}
     
     \begin{itemize}
-        \item 
+        \item Kratka stran želi dati najcenejšo - analiza možnosti
+        \item Prodamo terminsko pogodbo z izposojenim denarjem, 
+                kupimo eno od primernih obveznic
+        \item Izračunamo implicirane repo stopnjo za vse primerne obveznice
     \end{itemize}
 
-    \note[item]{}
+    \note[item]{cheapest-to-deliver issue}
+    \note[item]{cash and carry trade}
 
 \end{frame}
 
 
 \begin{frame}
-    \frametitle{Implicirana repo stopnja}
+    \frametitle{Implicirana repo stopnja (\textit{IRS})}
     
     \begin{itemize}
-        \item 
+        \item $ \text{IRS} = \frac{\text{donos}}{\text{strošek investicije}} 
+                \times \frac{360}{\text{dnevi do izročitve}} $
+        \item $ \text{donos} = \text{izkupiček} - \text{strošek investicije} $
+        \item $ \text{izkupiček} = \text{pretvorjena cena} + \text{natečene obresti} 
+                + \text{kuponi} + \text{obresti} $
+        \item $ \text{obresti} =  $
+        \item $ \text{strošek investicije} =  $
     \end{itemize}
 
-    \note[item]{}
+    \note[item]{katere obresti, kuponi, natečene obresti?}
+    \note[item]{Pojasni da je to neka rekurzivna zadevščina}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Izbire pri izročitvi}
+    
+    \begin{itemize}
+        \item Katera obveznica?
+        \item Kater dan?
+        \item Pred ali po zaprtju borze?
+    \end{itemize}
+
+    \note[item]{quality/swap, timing, wild card}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Proces izročitve}
+    
+    \begin{itemize}
+        \item Prvi dan: namen
+        \item Drugi dan: izbira obveznice, kupca
+        \item Tretji dan: izročitev
+    \end{itemize}
+
+    \note[item]{position, notice, delivery}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Terminske pogodbe na zakladno menico}
+    
+    \begin{itemize}
+        \item $10$-letna:
+        \item $5$-letna:
+        \item $2$-letna:
+    \end{itemize}
+
+    \note[item]{position, notice, delivery}
 
 \end{frame}
 
