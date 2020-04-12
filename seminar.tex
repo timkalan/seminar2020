@@ -4,6 +4,9 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{blindtext}
+\usepackage{amsmath} % pravilen izpis v "math mode"
+
+\newtheorem{primer}{Primer}
 
 \author{Tim Kalan \\ Fakulteta za matematiko in fiziko}
 \title{
@@ -113,7 +116,7 @@ in z njimibse trguje na neorganiziranem trgu (angl. \textit{over-the-counter}). 
 trg za posle praktično neobstoječ. Obračun cene se lahko zgodi vsak dan, a to ni nujno, če se zmenimo 
 drugače. Prav tako so generalno bolj tvegani, saj ni klirinške hiše, ki bi zagotovila, da obe strani 
 izpolnita dogovor. Tveganju, ki nastane, pravimo \textit{bilateral counterparty risk}. V ostalih pogledih
-in logiko, ki je ozadju, pa so praktično enaki terminskim pogodbam, zato koncepti, ki so opisani v 
+in logiki, ki je ozadju, pa so praktično enaki terminskim pogodbam, zato koncepti, ki so opisani v 
 nadaljevanju seveda veljajo tudi za njih.
 
 \section{Terminske pogodbe o obrestni meri}
@@ -173,16 +176,25 @@ Odvisni so od dejanske obveznice, ki jo dolga stran da, in od izročitvenega dat
 da dejansko bolj donosno obveznico, kot je v pogodbi, bo CBOT tako zagotovil, da vseeno dobi pravično
 ceno (in obratno, če da manj donosno obveznico).
 
-% simpl primer o bolj in manj donosni obveznici
+\begin{primer}
+    Recimo, da imamo pogodbo za obveznico z vrednostjo \textdollar$100.000$ in kuponsko mero $6\$$. 
+    Če nam prodajalec da obveznico z enako vrednostjo a višjo kuponsko mero; recimo $7\%$, to ni 
+    pošteno, saj je taka obveznica bolj vredna. Če pa je kuponska mera $5\%$, pa spet ni pravično, 
+    zato s pretvorbenim faktorjem izenačimo cene.
+\end{primer}
 
 Dejanska cena, ki jo kupec plača (angl. \textit{invoice price}) je tako odvisna od mnogih stvari. 
 Seveda je pomembna izročivena cena, določena v sami pogodbi in ">velikost pogodbe"< (torej število
 obveznic, ki se prodajo s pogodbo). Zgoraj smo ugotovili, da je pomemben tudi pretvorbeni faktor. 
 V osnovi pa govorimo o instrumentih na obrestne mere, zato ne smemo pozabiti na natečene obresti, 
 ki jih prinaša naše osnovno premoženje. Če povzamemo:
-%
-$$ cena = št.\:obveznic \times K \times pretvorbeni\:faktor + natečene\:obresti $$
-%
+
+\begin{align*}
+    cena 
+    &= št.\:obveznic \times K \times pretvorbeni\:faktor + natečene\:obresti \\
+    &= št.\:obveznic \times pretvorjena\:cena + natečene\:obresti
+\end{align*}
+
 
 % mogoče še en primer tle
 
@@ -193,12 +205,12 @@ issue}) in zato je potrebna analiza vseh možnosti. To izvedemo z naslednjim raz
 
 Zamislimo si, da istočasno prodamo terminsko pogodbo in z izposojenim denarjem kupimo eno 
 izmed obveznic, ki so navedene kot primerne za to pogodbo. Na datum izročive potem predamo 
-obveznico in z dobljenim denarjem poplačamo dolg - to imenujemo \textit{cash and carry trade}. 
-S tako situacijo potem poznamo dovolj podatkov, da izračunamo stopnjo povračila za tako 
-investicijo, pogosto to imenujemo \textbf{implicirana repo stopnja} (angl. \textit{implied 
-repo rate}). To lahko izračunamo za vse primerne obveznice in na koncu izberemo tisto, 
-katere stopja je najvišja. To obveznico potem imenujemo obveznica, najcenejša za poravnavo 
-(angl. \textit{cheapest-to-deliver issue}).
+obveznico in z dobljenim denarjem poplačamo dolg - to strategijo imenujemo \textit{cash 
+and carry trade}. S tako situacijo potem poznamo dovolj podatkov, da izračunamo stopnjo 
+povračila za tako investicijo, pogosto to imenujemo \textbf{implicirana repo stopnja} 
+(angl. \textit{implied repo rate}). To lahko izračunamo za vse primerne obveznice in na 
+koncu izberemo tisto, katere stopja je najvišja. To obveznico potem imenujemo obveznica, 
+najcenejša za poravnavo (angl. \textit{cheapest-to-deliver issue}).
 
 Za izračun implicirane repo stopnje moramo o obveznici poznati naslednje podake:
 
@@ -215,7 +227,7 @@ implicirano stopnjo povračila in zato jih lahko zanemarimo. S tem dobimo nasled
 $$ implicirana\:repo\:stopnja = \frac{donos}{strošek\:investicije} \times
 \frac{360}{dnevi\:do\:izročitve} $$
 %
-Kjer je donos razlika med prejetim izkupičkom ob izročitvenem datumu in stroškom investicije. 
+Kjer je donos razlika med prejetim izkupičkom ob izročitvenem datumu in stroškom investicije.
 Izkupiček je torej izročitvena cena terminske pogodbe (ne pozabimo upoštevati pretvorbenega 
 faktorja in natečenih obresti), kuponi, ki jih prejmemo in obresti od reinvesticije kuponov. 
 %
@@ -230,7 +242,49 @@ Strošek investicije je pa torej cena obveznice, ki jo kupimo in natečene obres
 Zadnji ulomek pa je enostavno anualizacija te repo stopnje, saj to nekako standardizira izračun
 in omogoča lažjo primerjavo. 
 
-% tu ponovno lahko pride primer ane
+\begin{primer}
+    Recimo, da imamo terminsko pogodbo z izročitveno ceno $K = 96$ in s $82$ dnevi do izročitvenega
+    datuma. poznamo tudi $42$-dnevno terminsko obrestno mero, po kateri lahko reinvestiramo kupon.
+    Ta je je $3,8\%$.
+
+    Hkrati pa imamo na voljo primerno obveznico z naslednjimi podatki:
+
+    \begin{itemize}
+        \item cena $P = 107$
+        \item plačane natečene obresti $3,8904$
+        \item kuponska obrestna mera $c = 10\%$
+        \item čas do izplačila kupona $ = 40$ dni
+        \item kupon $C = \textdollar5$
+        \item prejete natečene obresti ob izročitvi $ = 1,1507$
+        \item pretvorbeni faktor $ = 1,1111$
+    \end{itemize}
+
+    Najbolj enostaven je izračun pretvorjene cene:
+    %
+    $$ pretvorjena\:cena = P \times pretvorbeni\:faktor = 96 \times 1.1111 = 106,6656 $$
+    %
+    Za izračun implicirane repo stopnje potrebujemo še obresti od reinvesticije kupona, ki jih
+    dobimo po naslednji formuli:
+    
+    \begin{align*}
+        obresti
+        &= kupon \times obrestna\:mera \times \frac{št.\:dni\:vezave}{360} \\
+        &= \textdollar5 \times 0,038 \times \frac{82 - 40}{360} = 0,0222 
+    \end{align*}
+
+    Kjer je število dni vezave čas med izplačilom kupona in izročitvenim datumom. 
+
+    To nam da dovolj podatkov za izračun izkupička kot vsote pretvorjene cene, prejetih natečenih
+    obresti, kuponom, ki ga prejmemo, in obrestmi oz. $106,6566 + 1,1507 + 5 + 0,0222 = 112,8385$
+
+    Strošek investicije je cena obveznice in plačane natečene obresti oz. $107 + 3,8904 = 110,8904$.
+
+    Zdaj končo lahko izračunamo implicirano repo stopnjo:
+    %
+    $$ implicirana\:repo\:stopnja = \frac{112,8385 - 110,8904}{110,8904} \times \frac{360}{82} 
+    = 7,71\% $$
+    
+\end{primer}
 
 \subsubsection{Izbire pri izročitvi}
 Prodajalec ima ob izročitvi pravico in dolžnost sprejeti nekaj pomembnih odločitev. CBOT mu 
@@ -238,7 +292,7 @@ zagotavlja, da se lahko odloča vsaj glede naslednjih stvari:
 
 \begin{itemize}
     \item Odločiti se mora, katero izmed primernih obveznic bo izročil. Tej odločitvi v angleščini 
-            rečemo \textit{quality/swap option}
+            rečemo \textit{quality/swap option}.
     \item Izbere lahko, kater dan v izročitvenem mesecu bo izkoristil za dejansko izročitev
             obveznice - \textit{timing option}.
     \item Lahko si izbrere, da obveznico preda pred ali po zaprtju borze; tako lahko izbere, če 
@@ -292,7 +346,8 @@ ročnost manj od leta, vse ostalo so obveznice.
 \subsection{Terminske pogodbe na EURIBOR in LIBOR}
 \subsection{Terminske pogodbe na Eurodolar}
 
-\section{Vrednotenje}
+\section{Vrednotenje terminskih pogodb o obrestni meri}
+
 
 \section{Viri}
 \begin{description}
