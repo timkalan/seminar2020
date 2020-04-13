@@ -4,10 +4,12 @@
 \usepackage[slovene]{babel}
 \usepackage{pgfpages} % privat zapiski
 \usepackage{amsmath} % pravilen izpis v "math mode"
+\usepackage{hyperref}
+\hypersetup{hidelinks}
 
-%\setbeameroption{hide notes}                        % samo prosojnice
+\setbeameroption{hide notes}                        % samo prosojnice
 %\setbeameroption{show only notes}                   % samo zapiski
-\setbeameroption{show notes on second screen=right}  % oboje
+%\setbeameroption{show notes on second screen=right}  % oboje
 
 \usepackage{palatino}
 \usefonttheme{serif}
@@ -21,7 +23,7 @@
 \title{
     Terminske pogodbe o obrestni meri \\ 
     \large (angl. \textit{Interest rate futures})}
-\date{\today} 
+\date{14.\ april\ 2020} 
 
 \begin{document}
 
@@ -35,7 +37,9 @@
     \frametitle{Uvod}
 
     \begin{itemize}
+        \item Obveznice, menice, Eurodollar, EURIBOR, LIBOR
         \item Zakaj trgujemo s finančnimi instrumenti o obrestni meri?
+        
     \end{itemize}
 
     \note[item]{cena, hitrost, likvidnost}
@@ -50,9 +54,10 @@
     \frametitle{Trgovanje s terminskimi pogodbami - Terminske pogodbe}
     
     \begin{itemize}
-        \item Natančen dogovor med kupcem in prodajalcem
+        \item Natančen dogovor med kupcem in prodajalcem (standardizirano)
         \item Določi se vrsta blaga, datum izročitve, izročitvena cena
         \item Osnovno premoženje praktično karkoli 
+        \item Finančne terminske pogodbe
     \end{itemize}
 
     \note[item]{Organiziran trg -> standardizirane}
@@ -82,6 +87,7 @@
     \begin{itemize}
         \item ">Vrine"< kot kupec oz. prodajalec
         \item Zmanjša tveganje in poenostavi zapiranje pozicije
+        \item T. P. je med investitorjem in klirinško hišo
     \end{itemize}
 
     \note[item]{Objasni kaj sploh je klirinška hiša (middle man)}
@@ -94,7 +100,8 @@
     \frametitle{Trgovanje s terminskimi pogodbami - Zahteve po kritju}
     
     \begin{itemize}
-        \item Vzdrževalni račun, začetno kritje, vzdrževalno kritje
+        \item Vzdrževalni račun
+        \item Začetno, vzdrževalno, variacijsko kritje
         \item Zmanjša tveganje 
     \end{itemize}
 
@@ -108,9 +115,10 @@
     \frametitle{Terminski posli}
     
     \begin{itemize}
-        \item Nestrukturirane terminske pogodbe
+        \item Nestandardizirane terminske pogodbe
         \item Neorganiziran trg (\textit{OTC})
         \item Neobstoječ sekundarni trg
+        \item Tveganje, vmesni denarni tokovi
     \end{itemize}
 
     \note[item]{marking to market}
@@ -135,17 +143,46 @@
 
 
 \begin{frame}
+    \frametitle{Primer: \textit{Kako se zavarujemo?}}
+    
+    \begin{itemize}
+        \item Izposojen denar po variabilni obrestni meri
+        \item Prodamo terminsko pogodbo na obveznico
+        \item Dvig mere: večje obresti, a bolj vredna tudi pogodba
+        \item Rezultat: Začetna mera velja za celotno obdobje
+    \end{itemize}
+
+    \note[item]{}
+
+\end{frame}
+
+
+\begin{frame}
     \frametitle{Terminske pogodbe na državne obveznice}
     
     \begin{itemize}
         \item Osnovno premoženje hipotetična dvajset-letna kuponska 
-                obveznica z vrednostjo $100.000$
+                obveznica z vrednostjo \textdollar$100.000$
         \item Kotacija: $100\%$ vrednosti, razlike v dvaintridesetinah
         \item Minimalno odstopanje cene je $1 / 32 \%$
     \end{itemize}
 
     \note[item]{Nedokončano}
     \note[item]{kaj je minimum price flux?}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Primer: \textit{Kotacija}}
+    
+    \begin{itemize}
+        \item $101-25$ za \textdollar$100.000$ obveznico
+        \item $ (101-25) = 
+            \textdollar100.000 + \textdollar1.000 + (\textdollar1.000 \times \frac{25}{32}) $
+    \end{itemize}
+
+    \note[item]{}
 
 \end{frame}
 
@@ -171,11 +208,12 @@
     \begin{itemize}
         \item Naredijo pogodbe pravične - če predamo bolj donosno
                 obveznico, vseeno dobimo pravično ceno
-        \item Pač dej kaj so te natečene zdej
+        \item Ne pozabimo na natečene obresti 
         \item Dejanska cena tako odvisna od mnogih stvari:
     \end{itemize}
     %
-    $$ cena = št.\:obveznic \times K \times pretvorbeni\:faktor + natečene\:obresti $$
+    \textit{$ \textbf{cena} = \text{št. obveznic} \times \text{K} \times \text{pretvorbeni\:faktor} 
+        + \text{natečene obresti} $}
     %
 
     \note[item]{Primer tukaj ane?}
@@ -204,13 +242,15 @@
     \frametitle{Implicirana repo stopnja (\textit{IRS})}
     
     \begin{itemize}
-        \item $ \text{IRS} = \frac{\text{donos}}{\text{strošek investicije}} 
-                \times \frac{360}{\text{dnevi do izročitve}} $
-        \item $ \text{donos} = \text{izkupiček} - \text{strošek investicije} $
-        \item $ \text{izkupiček} = \text{pretvorjena cena} + \text{natečene obresti} 
-                + \text{kuponi} + \text{obresti} $
-        \item $ \text{obresti} =  $
-        \item $ \text{strošek investicije} =  $
+        \item \textit{$ \textbf{IRS} = \frac{\text{donos}}{\text{strošek investicije}} 
+                \times \frac{360}{\text{dnevi do izročitve}} $}
+        \item \textit{$ \textbf{donos} = \text{izkupiček} - \text{strošek investicije} $}
+        \item \textit{$ \textbf{izkupiček} = \text{pretvorjena cena} + \text{prejete natečene obresti} 
+                + \text{kuponi} + \text{obresti} $}
+        \item \textit{$ \textbf{obresti} =  \text{kupon} \times \text{obrestna mera} \times 
+                \frac{\text{št. dni vezave}}{360} $}
+        \item \textit{$ \textbf{strošek investicije} = \text{cena obveznice} + 
+                \text{plačane natečene obresti}$}
     \end{itemize}
 
     \note[item]{katere obresti, kuponi, natečene obresti?}
@@ -244,7 +284,6 @@
                     \item plačane natečene obresti $3,8904$
                     \item kuponska obrestna mera $c = 10\%$
                     \item čas do izplačila kupona $ = 40$ dni
-                    \item kupon $C = \textdollar5$
                     \item prejete natečene obresti ob izročitvi $ = 1,1507$
                     \item pretvorbeni faktor $ = 1,1111$
                 \end{itemize}
@@ -259,25 +298,20 @@
 \begin{frame}
     \frametitle{Primer: Izračun \textit{IRS} 2}
     
-    \begin{itemize}
-        \item
-                \begin{align*}
-                    pretvorjena\:cena 
-                    &= P \times pretvorbeni\:faktor \\
-                    &= 96 \times 1.1111 \\
-                    &= 106,6656
-                \end{align*}
-        \item
-                \begin{align*}
-                    obresti
-                    &= kupon \times obrestna\:mera \times \frac{št.\:dni\:vezave}{360} \\
-                    &= \textdollar5 \times 0,038 \times \frac{82 - 40}{360} \\
-                    &= 0,0222 
-                \end{align*}
-            
-    \end{itemize}
-
-    \note[item]{}
+    \begin{align*}
+        \textit{pretvorjena cena} 
+        &= \textit{P} \times \textit{pretvorbeni faktor} \\
+        &= 96 \times 1.1111 \\
+        &= 106,6656
+    \end{align*}
+    
+    \begin{align*}
+        \textit{obresti}
+        &= \textit{kupon} \times \textit{obrestna mera} \times 
+            \frac{\textit{št. dni vezave}}{360} \\
+        &= \textdollar5 \times 0,038 \times \frac{82 - 40}{360} \\
+        &= 0,0222 
+    \end{align*}
 
 \end{frame}
 
@@ -285,24 +319,20 @@
 \begin{frame}
     \frametitle{Primer: Izračun \textit{IRS} 3}
     
-    \begin{itemize}
-        \item
-                \begin{align*}
-                    \text{izkupiček} 
-                    &= \text{pretvorjena cena} + \text{prejete natečene obresti} + 
-                        \text{kupon} + \text{obresti} \\
-                    &= 106,6566 + 1,1507 + 5 + 0,0222 
-                    &= 112,8385 \\
-                \end{align*}
-        \item
-                \begin{align*}
-                    \text{strošek investicije}
-                    &= \text{cena obveznice} + \text{plačane natečene obresti} \\
-                    &= 107 + 3,8904 \\
-                    &=110,8904
-                \end{align*}
-            
-    \end{itemize}
+    \begin{align*}
+        \textit{izkupiček} 
+        &= \textit{pretvorjena cena} + \textit{prejete natečene obresti} \\
+        &+ \textit{kupon} + \textit{obresti} \\
+        &= 106,6566 + 1,1507 + 5 + 0,0222 \\
+        &= 112,8385 
+    \end{align*}
+    
+    \begin{align*}
+        \textit{investicija}
+        &= \textit{cena obveznice} + \textit{plačane natečene obresti} \\
+        &= 107 + 3,8904 \\
+        &=110,8904
+    \end{align*}
 
     \note[item]{}
 
@@ -311,18 +341,14 @@
 
 \begin{frame}
     \frametitle{Primer: Izračun \textit{IRS} 4}
-    
-    \begin{itemize}
-        \item
-                \begin{align*}
-                    \text{IRS} 
-                    &= \frac{\text{donos}}{\text{strošekinvesticije}} \times 
-                        \frac{360}{\text{dnevi do izročitve}} \\
-                    &= \frac{112,8385 - 110,8904}{110,8904} \times \frac{360}{82} \\
-                    &= 7,71\% 
-                \end{align*}
-            
-    \end{itemize}
+
+    \begin{align*}
+        \textit{IRS} 
+        &= \frac{\textit{donos}}{\textit{strošek investicije}} \times 
+            \frac{360}{\textit{dnevi do izročitve}} \\
+        &= \frac{112,8385 - 110,8904}{110,8904} \times \frac{360}{82} \\
+        &= 7,71\% 
+    \end{align*}
 
     \note[item]{}
 
@@ -358,12 +384,13 @@
 
 
 \begin{frame}
-    \frametitle{Terminske pogodbe na zakladno menico}
+    \frametitle{Katere so ostale terminske pogodbe o obrestni meri?}
     
     \begin{itemize}
-        \item $10$-letna:
-        \item $5$-letna:
-        \item $2$-letna:
+        \item Zakladna menica ($2$, $5$, $10$ letna )
+        \item Vladne agencije (Fannie Mae, Freddie Mac)
+        \item EURIBOR in LIBOR
+        \item Eurodollar
     \end{itemize}
 
     \note[item]{position, notice, delivery}
@@ -375,8 +402,11 @@
     \frametitle{Viri}
     
     \begin{itemize}
-        \item Vir 
-        \item Investipedia
+        \item Frank. J. Fabozzi: \textit{Fixed Income Analysis}, John Wiley \& Sons $2$. izdaja, 2007
+        \item Investopedia: \textit{Interest Rate Future} (leto ogleda: $2020$), \\
+                dostopno na: \url{https://www.investopedia.com/terms/i/interestratefuture.asp}
+        \item AccountingTools: \textit{Interest Rate Futures} (leto ogleda: $2020$), \\
+                dostopno na: \url{https://www.accountingtools.com/articles/2017/5/15/interest-rate-futures}
     \end{itemize}
 
 \end{frame}
