@@ -1,10 +1,12 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper, 11pt]{article}
 \usepackage[slovene]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{blindtext}
 \usepackage{amsmath} % pravilen izpis v "math mode"
+\usepackage{hyperref}
+\hypersetup{hidelinks}
 
 \newtheorem{primer}{Primer}
 
@@ -15,7 +17,10 @@
 \date{19.\ marec\ 2020} % \today za današnji datum 
 
 \begin{document}
-\maketitle
+\begin{titlepage}
+    \maketitle
+    \thispagestyle{empty}
+\end{titlepage}
 
 \pagebreak
 
@@ -38,12 +43,12 @@ portfelj. Zadnji pomemben razlog pa je, da se obresne mere manj odzovejo na povp
 smislu dvigovanja njihovih cen (oz. cen poslovanja z njimi), kot alternative na trgu denarja.
 
 \section{Trgovanje s terminskimi pogodbami}
+S terminski pogodbami se trguje na organiziranem trgu (torej borzah) in zato so standardizirane. 
+To pomeni, da se v njih natančno določi vrsta in kvaliteta blaga.
+
 V tem razdelku si bomo natančno pogledali principe trgovanja s terminskimi pogodbami. Ugotovili
 bomo, kako se zapre pozicijo, kaj je vloga klirinške hiše pri trgovanju in zakaj trgovci potrebujejo
 kritje.
-
-S terminski pogodbami se trguje na organiziranem trgu (torej borzah) in zato so standardizirane. 
-To pomeni, da se v njih natančno določi vrsta in kvaliteta blaga.
 
 \subsection{Terminske pogodbe}
 Na kratko ponovimo nekaj splošnih reči o terminski pogodbi (angl. \textit{\textbf{future}}), da se 
@@ -59,8 +64,8 @@ Terminske pogodbe na obrestne mere spadajo pod \textbf{finančne} terminske pogo
 (angl. \textit{financial futures}), kar preprosto pomeni, da je osnovno premoženje v njih nek
 finančni instrument; recimo ti, ki smo jih našteli zgoraj.
 
-Kupcu terminske pogodbe pogosto rečemo dolga stran in realizira profit, če se cena na trgu 
-povzdigne. Na drugi strani pa imamo prodajalca ali kratko stran, ki profitira ob padcu cene.
+Kupcu terminske pogodbe pogosto rečemo dolga stran in realizira profit, če se cena pogodbe na 
+trgu povzdigne. Na drugi strani pa imamo prodajalca ali kratko stran, ki profitira ob padcu cene.
 
 \subsection{Zapiranje pozicije}
 Velika večina finančnih terminskih pogodb ima izročitvene datume marca, junija, septembra ali 
@@ -79,8 +84,8 @@ Nekatere terminske pogodbe o obrestni meri je mogoče poravnati le z denarjem al
 enakovrednimi stvarmi. Take pogodbe v angleščini imenujemo \textit{cash settlement contracts}.
 
 \subsection{Vloga klirinške hiše}
-Vsaka borza, kjer se trguje s terminskimi pogodbami in vsaka borza nasploh ima svojo \textbf{
-klirinško hišo}. V tem razdelju si bomo ogledali njene funkcije.
+Vsaka borza, kjer se trguje s terminskimi pogodbami in vsaka borza nasploh ima sebi asociirano 
+\textbf{klirinško hišo}. V tem razdelku si bomo ogledali njene funkcije.
 
 Njena glavna funkcija je, da zagotovi, da bosta obe strani pogodbe izpolnjeni in s tem 
 udeleženim v pogodbi omili skrbi in zmanjša njihovo tveganje. To doseže tako, da kadarkoli
@@ -102,17 +107,19 @@ tudi s katerimkoli vrednostnim papirjem, ki izplačuje obresti (npr. obveznica).
 
 V času med sklenitvijo in iztekom pogodbe, njena cena na trgu niha. Ker trgujemo na organiziranem
 trgu, je ob koncu vsakega trgovalnega dne pogodba vrednostena (angl. \textit{marking-to-market}). 
-Kot kupec pogodbe smo dolžni vzdrževati razliko med stanjem na računu in vzdrževalnim kritjem
-(angl. \textit{maintenance margin}) v primeru neugodnega premika cene in imamo pravico vzeti zase 
-dodatno oz. presežno maržo, če je premik ugoden. 
+Kot kupec pogodbe smo dolžni vzdrževati količino denarja na računu in poskrbeti, da je le-tega več, 
+kot je predpisano vzdrževalno kritje (angl. \textit{maintenance margin}). v primeru neugodnega 
+premika cene moramo torej na račun naložiti dodaten denar, da zadovoljimo to zahtevo, temu denarju 
+pravimo variacijsko kritje (angl. \textit{variation margin}). Če pa se cena zniža in imamo na 
+računu karnaenkrat preveč kritja, imamo pravico ta presežek vzeti iz računa. 
 
-Dodatnemu kritju, ki ga moramo nakazati pravimo variacijsko kritje (angl. \textit{variation margin}) 
-in mora biti nujno v denarju (in ne vrednostnem papirju). 
+Dolžnost kupca je, da vse spremembe zahtev po kritju poravna v roku $24$ ur, če mu to ne uspe, se
+njegova pozicija avtomatično zapre.
 
 \section{Terminski posli}
 Terminski posli (angl. \textit{forwards}) so zelo podobni terminskim pogodbam s ključno razliko:
 niso standardizirani, kar pomeni, da so podrobnosti vsakega posla dogovorjene na individualnem nivoju 
-in z njimibse trguje na neorganiziranem trgu (angl. \textit{over-the-counter}). Posledično je sekundarni 
+in z njimi se trguje na neorganiziranem trgu (angl. \textit{over-the-counter}). Posledično je sekundarni 
 trg za posle praktično neobstoječ. Obračun cene se lahko zgodi vsak dan, a to ni nujno, če se zmenimo 
 drugače. Prav tako so generalno bolj tvegani, saj ni klirinške hiše, ki bi zagotovila, da obe strani 
 izpolnita dogovor. Tveganju, ki nastane, pravimo \textit{bilateral counterparty risk}. V ostalih pogledih
@@ -125,8 +132,17 @@ ustvari dobiček (ali izgubo) zaradi sprememb obrestnih mer. S pametnim razmisle
 strategije se lahko z njimi zavaruje pred spremembo obrestnih mer, z dodatkom sreče pri napovedovanju
 trga pa lahko tudi dobro zasluži.
 
-% če ne omeniš kasneje, daš lahko sem simpl primer o posojilu s spremenljivo mero in kako se s tem zavarujemo
-% pred izgubo, če mera naraste.
+\begin{primer}
+    Recimo, da imamo izposojen denar po spremenljivi obrestni meri in nas skrbi, da bo obrestna mera v 
+    prihodnosti narastla. Če prodamo terminsko pogodbo na državno obveznico, se s tem zavarujemo pred 
+    takim porastom. Poglejmo kaj se zgodi:
+
+    Če obrestna mera res naraste, pade cena obveznice, ki je osnovno premoženje naše pogodbe. Zato pade
+    tudi njena cena. Ker pa smo mi pogodbo prodali po višji ceni, smo s tem efektivno zaslužili toliko, 
+    kot izgubimo zaradi višje obrestne mere. Če pa smo se pri naši napovedi zmotili in mera pade, bo 
+    vrednost naše pogodbe padla, to izgubo pa bodo pokrile nižje obresti. S takim poslom zato spremenimo
+    variabilno obrestno mero v fiksno. 
+\end{primer}
 
 Terminske pogodbe o obrestni meri lahko glede na datum dospetja njihovega osnovnega premoženja delimo na 
 dve skupini: Če je ta datum manj kot leto v prihodnosti, govorimo o kratkotrajnih pogodbah (angl. 
@@ -145,10 +161,13 @@ obračunski kupon (angl. \textit{notional coupon}). Pogodbe so kotirane tako, da
 obveznice označimo s $100$ (kar pomeni $100\%$ vrednosti). Razlike so potem kotirane v dvaintridesetinah 
 enega procenta. To se tradicionalno označi s 
 %
-$$ celi\:del - število\:dvaintridesetin, $$
+$$ celi\:del - število\:dvaintridesetin. $$
 %
-to pomeni, da $97-16$ predstavlja $97,5\%$ nominalne vrednosti. To je potem tudi cena, ki je zapisana v 
-pogodbi.
+
+\begin{primer}
+    Recimo, da je v pogodbi zapisana cena $97-16$. To pomeni, da moramo za vsako obveznico, ki jo kupimo 
+    na ta način, plačati $97\% + (16/32)\% = 97,5\%$ nominalne vrednosti. 
+\end{primer}
 
 Na borzi je definirano tudi minimalno odstopanje cene (angl. \textit{minimum price fluctuation}) obveznice
 kot $1/32$ enega procenta, kar se pri dani nominalni vrednosti prevede v \textdollar$31,25.$ To pomeni, da
@@ -210,7 +229,8 @@ and carry trade}. S tako situacijo potem poznamo dovolj podatkov, da izračunamo
 povračila za tako investicijo, pogosto to imenujemo \textbf{implicirana repo stopnja} 
 (angl. \textit{implied repo rate}). To lahko izračunamo za vse primerne obveznice in na 
 koncu izberemo tisto, katere stopja je najvišja. To obveznico potem imenujemo obveznica, 
-najcenejša za poravnavo (angl. \textit{cheapest-to-deliver issue}).
+najcenejša za poravnavo (angl. \textit{cheapest-to-deliver issue}). Ta ima ključno vlogo
+pri vrednotenju terminskih pogodb o obrestni meri (več o tem si lahko preberete v kasnejši temi).
 
 Za izračun implicirane repo stopnje moramo o obveznici poznati naslednje podake:
 
@@ -324,13 +344,13 @@ definirana malce drugačno hipotetično osnovno premoženje:
 
 \begin{itemize}
     \item \textit{za $10$-letno pogodbo:} je osnovno premoženje $10$-letna menica s $6$-procentno
-            kuponsko obrestno mero in vrednostjo \textdollar$100.00$. Kratka stran lahko dostavi 
+            kuponsko obrestno mero in vrednostjo \textdollar$100.000$. Kratka stran lahko dostavi 
             obveznico, ki ima ročnost med $6.5$ in $10$ leti od prvega v izročitvenem mesecu.
     \item \textit{za $5$-letno pogodbo:} je osnovno premoženje menica s $6$-procentno kuponsko 
-            obrestno mero in vrednostjo \textdollar$100.00$, ki ima skupno ročnost vsaj $5$ let
+            obrestno mero in vrednostjo \textdollar$100.000$, ki ima skupno ročnost vsaj $5$ let
             in $3$ mesece, od katere je preostalo vsaj $4$ leta in $2$ meseca.
     \item \textit{za $2$-letno pogodbo:} je osnovno premoženje menica s $6$-procentno kuponsko 
-    obrestno mero in vrednostjo \textdollar$200.00$, ki ima skupno ročnost manj kot $5$ let
+    obrestno mero in vrednostjo \textdollar$200.000$, ki ima skupno ročnost manj kot $5$ let
     in $3$ mesece, od katere je preostalo med $1$ letom in $9$ mesecev in $2$ letoma.
 \end{itemize} 
 
@@ -339,19 +359,19 @@ V osnovi je edina razlika med menico in obveznico ročnost. Obveznice imajo roč
 let, menice pa manj kot $10$ let. Pripomnimo še, da je v Sloveniji delitev drugačna. Menice imajo
 ročnost manj od leta, vse ostalo so obveznice.
 
-\subsection{Terminske pogodbe na obveznice posebnih državnih institucij \\
-            (angl. \textit{agency note futures contracts})}
+\subsection{Za kaj se še uporabljajo terminske pogodbe o obrestni meri?}
+Torej: obveznice posebnih vladnih agencij (angl. \textit{agency note futures contracts}), EURIBOR, 
+LIBOR, Eurodollar, Federal National MOrtgage Association, Federal Home Loan Mortgage Corporation
 
-            
-\subsection{Terminske pogodbe na EURIBOR in LIBOR}
-\subsection{Terminske pogodbe na Eurodolar}
-
-\section{Vrednotenje terminskih pogodb o obrestni meri}
-
+\pagebreak
 
 \section{Viri}
-\begin{description}
-    \item a dela?
-\end{description}
+\begin{itemize}
+    \item Frank. J. Fabozzi: \textit{Fixed Income Analysis}, John Wiley \& Sons $2$. izdaja, 2007
+    \item Investopedia: \textit{Interest Rate Future} (leto ogleda: $2020$), \\
+            dostopno na: \url{https://www.investopedia.com/terms/i/interestratefuture.asp}
+            \item AccountingTools: \textit{Interest Rate Futures} (leto ogleda: $2020$), \\
+            dostopno na: \url{https://www.accountingtools.com/articles/2017/5/15/interest-rate-futures}
+\end{itemize}
 
 \end{document}
