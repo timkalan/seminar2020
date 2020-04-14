@@ -25,7 +25,20 @@
 \pagebreak
 
 \begin{abstract}
-    Še pride.
+    Finančni instrumenti o obrestni meri nam omogočajo zavarovanje pred premiki obresrnih mer. Za to 
+    lahko uporabimo recimo terminsko pogodbo o obrestni meri, ki ima za osnovno premoženje hipotetičen
+    instrument (recimo obveznico). Zaradi tega dejstva je prodajalcu prepuščena odločitev, katero 
+    obveznico bo dejansko prodal. Iz tu potem izhaja ekonomka analiza vseh možnosti in izračun donosa
+    vsake možne izbire. Ko dobimo obveznico, najcenejšo za poravnavo, hkrati spoznamo osnovo za vrednotenje
+    teh pogodb. 
+
+    Spoznamo tudi mehaniko trgovanja s terminskimi pogodbami na ameriški \textit{Chicago board of trade}, ki 
+    pa je temelj in podlaga za ostale borze, ki trgujejo s temi pogodbami. Osredotočimo se na državne obveznice
+    in spoznamo proces poravnave in možnosti, ki jih imamo na voljo za zapiranje pozicije.
+
+    \textit{Ključne besede: terminska pogodba, CBOT, državna obveznica, donos}
+    
+
 \end{abstract}
 
 \pagebreak
@@ -70,11 +83,11 @@ trgu povzdigne. Na drugi strani pa imamo prodajalca ali kratko stran, ki profiti
 \subsection{Zapiranje pozicije}
 Velika večina finančnih terminskih pogodb ima izročitvene datume marca, junija, septembra ali 
 decembra, zato je relativno enostavno določiti, kdaj je potrebno prenehati s trgovanjem s temi 
-pogodbami na sekundarnem trgu; CBOT namreč določi tudi to. Do tega datuma pa ima trgovalec 
-(angl. \textit{trader}) naslednjo možno strategijo za zaprtje svoje pozicije (naj opomnimo, da 
-zapiranje pozicije pomeni izstop iz posla. Ko pozicijo zapremo, vemo točno kakšne denarne 
-tokove je ustvarila): če je kupec, mora prodati isto število identičnih terminskih pogodb in 
-obratno, če je prodajalec.
+pogodbami na sekundarnem trgu; borza, na kateri trgujemo, določi tudi to. Do tega datuma pa 
+ima trgovalec (angl. \textit{trader}) naslednjo možno strategijo za zaprtje svoje pozicije 
+(naj opomnimo, da zapiranje pozicije pomeni izstop iz posla. Ko pozicijo zapremo, vemo točno 
+kakšne denarne tokove je ustvarila): če je kupec, mora prodati isto število identičnih 
+terminskih pogodb in obratno, če je prodajalec.
 
 Pozicijo lahko zapre tudi na datum izročitve, in sicer tako, da pač izvede svoje obveznosti. 
 Kupec torej sprejme osnovno premoženje in ga plača po zmenjeni ceni in obratno za prodajalca - 
@@ -226,13 +239,14 @@ Zamislimo si, da istočasno prodamo terminsko pogodbo in z izposojenim denarjem 
 izmed obveznic, ki so navedene kot primerne za to pogodbo. Na datum izročive potem predamo 
 obveznico in z dobljenim denarjem poplačamo dolg - to strategijo imenujemo \textit{cash 
 and carry trade}. S tako situacijo potem poznamo dovolj podatkov, da izračunamo stopnjo 
-povračila za tako investicijo, pogosto to imenujemo \textbf{implicirana repo stopnja} 
-(angl. \textit{implied repo rate}). To lahko izračunamo za vse primerne obveznice in na 
-koncu izberemo tisto, katere stopja je najvišja. To obveznico potem imenujemo obveznica, 
+povračila za tako investicijo, v angleščini to imenujemo \textbf{implied repo rate}. To je 
+torej implicirana obrestna mera oz. impliciran donos, ki ga ima ta strategija in s tem tudi 
+naša potencialna obveznica. Tak izračun lahko naredimo za vse primerne obveznice in na 
+koncu izberemo tisto, katere donos je najvišji. To obveznico potem imenujemo obveznica, 
 najcenejša za poravnavo (angl. \textit{cheapest-to-deliver issue}). Ta ima ključno vlogo
 pri vrednotenju terminskih pogodb o obrestni meri (več o tem si lahko preberete v kasnejši temi).
 
-Za izračun implicirane repo stopnje moramo o obveznici poznati naslednje podake:
+Za izračun impliciranega donosa moramo o obveznici poznati naslednje podake:
 
 \begin{itemize}
     \item Ceno po kateri lahko kupimo obveznico in natečene obresti, ki ji pripradajo,
@@ -244,7 +258,7 @@ Za izračun implicirane repo stopnje moramo o obveznici poznati naslednje podake
 Čeprav slednje točke ne moremo točno poznati, imajo njene podrobnosti majhen učinek na 
 implicirano stopnjo povračila in zato jih lahko zanemarimo. S tem dobimo naslednjo formulo:
 %
-$$ implicirana\:repo\:stopnja = \frac{donos}{strošek\:investicije} \times
+$$ impliciran\:donos = \frac{donos}{strošek\:investicije} \times
 \frac{360}{dnevi\:do\:izročitve} $$
 %
 Kjer je donos razlika med prejetim izkupičkom ob izročitvenem datumu in stroškom investicije.
@@ -283,7 +297,7 @@ in omogoča lažjo primerjavo.
     %
     $$ pretvorjena\:cena = P \times pretvorbeni\:faktor = 96 \times 1.1111 = 106,6656 $$
     %
-    Za izračun implicirane repo stopnje potrebujemo še obresti od reinvesticije kupona, ki jih
+    Za izračun impliciranega donosa potrebujemo še obresti od reinvesticije kupona, ki jih
     dobimo po naslednji formuli:
     
     \begin{align*}
@@ -299,9 +313,9 @@ in omogoča lažjo primerjavo.
 
     Strošek investicije je cena obveznice in plačane natečene obresti oz. $107 + 3,8904 = 110,8904$.
 
-    Zdaj končo lahko izračunamo implicirano repo stopnjo:
+    Zdaj končo lahko izračunamo impliciran donos:
     %
-    $$ implicirana\:repo\:stopnja = \frac{112,8385 - 110,8904}{110,8904} \times \frac{360}{82} 
+    $$ impliciran\:donos = \frac{112,8385 - 110,8904}{110,8904} \times \frac{360}{82} 
     = 7,71\% $$
     
 \end{primer}
@@ -360,10 +374,8 @@ let, menice pa manj kot $10$ let. Pripomnimo še, da je v Sloveniji delitev drug
 ročnost manj od leta, vse ostalo so obveznice.
 
 \subsection{Za kaj se še uporabljajo terminske pogodbe o obrestni meri?}
-Torej: obveznice posebnih vladnih agencij (angl. \textit{agency note futures contracts}), EURIBOR, 
-LIBOR, Eurodollar, Federal National MOrtgage Association, Federal Home Loan Mortgage Corporation
-
-\pagebreak
+Zgoraj opisane pogodbe se prodajajo predvsem v ZDA. V Evropi so bolj popularne terminske pogodbe, ki 
+za osnovno premoženje instrumente, ki temeljijo na Eurodolarju in obrestnih merah EURIBOR in LIBOR.
 
 \section{Viri}
 \begin{itemize}
