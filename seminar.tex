@@ -25,12 +25,12 @@
 \pagebreak
 
 \begin{abstract}
-    Finančni instrumenti o obrestni meri nam omogočajo zavarovanje pred premiki obresrnih mer. Za to 
+    Finančni instrumenti o obrestni meri nam omogočajo zaščito pred tveganjem premikov obrestnih mer. Za to 
     lahko uporabimo recimo terminsko pogodbo o obrestni meri, ki ima za osnovno premoženje hipotetičen
     instrument (recimo obveznico). Zaradi tega dejstva je prodajalcu prepuščena odločitev, katero 
     obveznico bo dejansko prodal. Iz tu potem izhaja ekonomka analiza vseh možnosti in izračun donosa
-    vsake možne izbire. Ko dobimo obveznico, najcenejšo za poravnavo, hkrati spoznamo osnovo za vrednotenje
-    teh pogodb. 
+    vsake možne izbire. Ko dobimo obveznico, ki je najcenejša za poravnavo, hkrati spoznamo osnovo za 
+    vrednotenje teh pogodb. 
 
     Tekom seminarske naloge spoznamo tudi mehaniko trgovanja s terminskimi pogodbami na ameriški borzi 
     \textit{Chicago board of trade}, ki pa je temelj in podlaga za ostale borze, ki trgujejo s temi pogodbami. 
@@ -51,10 +51,11 @@
 \section{Uvod}
 Ob obsegu današnjega trga in vseh možnostih, ki jih ponuja, se je morda smiselno vprašati,
 zakaj bi investitor sploh trgoval z finančnimi instrumenti o obrestni meri. Pojavijo se trije
-glavni razlogi: Prvič, tipično je trgovanje na trgu obrestnih mer cenejše in posledično nas 
-stane manj, da preko obrestnih mer omilimo tveganje. Prav tako lahko tipično hitreje prilagajamo svoj 
-portfelj. Zadnji pomemben razlog pa je, da se obresne mere manj odzovejo na povpraševanje v 
-smislu dvigovanja njihovih cen (oz. cen poslovanja z njimi), kot alternative na trgu denarja.
+glavni razlogi: Prvič, tipično je trgovanje na trgu finančnih instrumentov, ki temeljijo na 
+obrestnih merah, cenejše in posledično nas stane manj, da preko teh instrumentov omilimo 
+tveganje. Prav tako lahko tipično hitreje prilagajamo svoj portfelj. Zadnji pomemben razlog 
+pa je, da se instrumenti o obrestni meri manj odzovejo na povpraševanje v smislu dvigovanja 
+njihovih cen (oz. cen poslovanja z njimi), kot alternative na trgu denarja.
 
 \section{Trgovanje s terminskimi pogodbami}
 S terminski pogodbami se trguje na organiziranem trgu (torej borzah) in zato so standardizirane. 
@@ -123,7 +124,7 @@ Kot kupec pogodbe smo dolžni vzdrževati količino denarja na računu in poskrb
 kot je predpisano vzdrževalno kritje (angl. \textit{maintenance margin}). v primeru neugodnega 
 premika cene moramo torej na račun naložiti dodaten denar, da zadovoljimo to zahtevo, temu denarju 
 pravimo variacijsko kritje (angl. \textit{variation margin}). Če pa se cena zniža in imamo na 
-računu karnaenkrat preveč kritja, imamo pravico ta presežek vzeti iz računa. 
+računu zato preveč kritja, imamo pravico ta presežek vzeti z računa. 
 
 Dolžnost kupca je, da vse spremembe zahtev po kritju poravna v roku $24$ ur, če mu to ne uspe, se
 njegova pozicija avtomatično zapre.
@@ -132,17 +133,19 @@ njegova pozicija avtomatično zapre.
 Terminski posli (angl. \textit{forwards}) so zelo podobni terminskim pogodbam s ključno razliko:
 niso standardizirani, kar pomeni, da so podrobnosti vsakega posla dogovorjene na individualnem nivoju 
 in z njimi se trguje na neorganiziranem oz. odprtem trgu (angl. \textit{over-the-counter}). Posledično 
-je sekundarni trg za posle praktično neobstoječ. Obračun cene se lahko zgodi vsak dan, a to ni nujno, 
-če se zmenimo drugače. Prav tako so generalno bolj tvegani, saj ni klirinške hiše, ki bi zagotovila, 
-da obe strani izpolnita dogovor. Tveganju, ki nastane, pravimo \textit{bilateral counterparty risk}. 
-V ostalih pogledih in logiki, ki je ozadju, pa so praktično enaki terminskim pogodbam, zato koncepti, 
-ki so opisani v nadaljevanju seveda veljajo tudi za njih.
+je sekundarni trg za posle lahko neobstoječ (to pa ni nujno; nekateri vrednostni papirji so zelo 
+likvidni). Obračun cene se lahko zgodi vsak dan, a se zaradi svobode, ki jo imamo pri trgovanju s 
+terminskimi posli, lahko zmenimo drugače. Prav tako so generalno bolj tvegani, saj ni klirinške hiše, 
+ki bi zagotovila, da obe strani izpolnita dogovor. Tveganju, ki nastane, pravimo dvostransko tveganje 
+nasprotne strani (angl. \textit{bilateral counterparty risk}). V ostalih pogledih in logiki, ki je 
+ozadju, pa so praktično enaki terminskim pogodbam, zato koncepti, ki so opisani v nadaljevanju seveda 
+veljajo tudi za njih.
 
 \section{Terminske pogodbe o obrestni meri}
 So terminske pogodbe, katerih osnovno premoženje izplačuje obresti. Kupcu pogodbe tako omogočajo, da 
-ustvari dobiček (ali izgubo) zaradi sprememb obrestnih mer. S pametnim razmislekom in uporabo prave 
-strategije se lahko z njimi zavaruje pred spremembo obrestnih mer, z dodatkom sreče pri napovedovanju
-trga pa lahko tudi dobro zasluži.
+ustvari dobiček (ali izgubo) zaradi sprememb obrestnih mer. Imajo dve glavni uporabi: poglavitno se 
+uporabljajo za zaščito pred premikom obrestnih mer (angl. \textit{hedging}), z uporabo primerne analize 
+in modelov pa omogočajo tudi zaslužek. 
 
 \begin{primer}
     Recimo, da imamo izposojen denar po spremenljivi obrestni meri in nas skrbi, da bo obrestna mera v 
@@ -150,7 +153,7 @@ trga pa lahko tudi dobro zasluži.
     takim porastom. Poglejmo kaj se zgodi:
 
     Če obrestna mera res naraste, pade cena obveznice, ki je osnovno premoženje naše pogodbe. Zato pade
-    tudi njena cena. Ker pa smo mi pogodbo prodali po višji ceni, smo s tem efektivno zaslužili toliko, 
+    tudi cena pogodbe. Ker pa smo mi pogodbo prodali po višji ceni, smo s tem efektivno zaslužili toliko, 
     kot izgubimo zaradi višje obrestne mere. Če pa smo se pri naši napovedi zmotili in mera pade, bo 
     vrednost naše pogodbe padla, to izgubo pa bodo pokrile nižje obresti. S takim poslom tako poskrbimo, 
     da bo začetna obrestna mera veljala celotno obdobje in efektivno spremenimo variabilno obrestno mero 
@@ -158,8 +161,8 @@ trga pa lahko tudi dobro zasluži.
 \end{primer}
 
 Terminske pogodbe o obrestni meri lahko glede na datum dospetja njihovega osnovnega premoženja delimo na 
-dve skupini: Če je ta datum manj kot leto v prihodnosti, govorimo o kratkotrajnih pogodbah (angl. 
-\textit{short-term}), v nasprotnem primeru pa o dolgotrajnih pogodbah (angl. \textit{long-term}). 
+dve skupini: Če je ta datum manj kot leto v prihodnosti, govorimo o kratkoročnih pogodbah (angl. 
+\textit{short-term}), v nasprotnem primeru pa o dolgoročnih pogodbah (angl. \textit{long-term}). 
 
 V nadaljevanju se bomo osredotočili predvsem na pogodbe na državne obveznice in zakladne menice; s temi
 se namreč najbolj pogosto trguje v ZDA, ostale države sveta pa so opisane koncepte posvojile in po njih
@@ -215,8 +218,8 @@ ceno (in obratno, če da manj donosno obveznico).
     zato s pretvorbenim faktorjem izenačimo cene.
 \end{primer}
 
-Dejanska cena, ki jo kupec plača (angl. \textit{invoice price}) je tako odvisna od mnogih stvari. 
-Seveda je pomembna izročivena cena, določena v sami pogodbi in ">velikost pogodbe"< (torej število
+Dejanska cena, ki jo kupec plača (angl. \textit{invoice price}), je tako odvisna od mnogih stvari. 
+Seveda je pomembna izročitvena cena, določena v sami pogodbi in ">velikost pogodbe"< (torej število
 obveznic, ki se prodajo s pogodbo). Zgoraj smo ugotovili, da je pomemben tudi pretvorbeni faktor. 
 V osnovi pa govorimo o instrumentih na obrestne mere, zato ne smemo pozabiti na natečene obresti, 
 ki jih prinaša naše osnovno premoženje. Če povzamemo:
@@ -226,9 +229,6 @@ ki jih prinaša naše osnovno premoženje. Če povzamemo:
     &= št.\:obveznic \times K \times pretvorbeni\:faktor + natečene\:obresti \\
     &= št.\:obveznic \times pretvorjena\:cena + natečene\:obresti
 \end{align*}
-
-
-% mogoče še en primer tle
 
 \subsubsection{Obveznica, najcenejša za poravnavo}
 Zgoraj smo ugotovili, da je možno pri predaji izbirati med različnimi obveznicami, in seveda niso
@@ -242,7 +242,7 @@ and carry trade}. S tako situacijo potem poznamo dovolj podatkov, da izračunamo
 povračila za tako investicijo, v angleščini to imenujemo \textbf{implied repo rate}. To je 
 torej implicirana obrestna mera oz. impliciran donos, ki ga ima ta strategija in s tem tudi 
 naša potencialna obveznica. Tak izračun lahko naredimo za vse primerne obveznice in na 
-koncu izberemo tisto, katere donos je najvišji. To obveznico potem imenujemo obveznica, 
+koncu izberemo tisto, katere donos je najvišji. To obveznico potem imenujemo obveznica 
 najcenejša za poravnavo (angl. \textit{cheapest-to-deliver issue}). Ta ima ključno vlogo
 pri vrednotenju terminskih pogodb o obrestni meri (več o tem si lahko preberete v kasnejši temi).
 
@@ -251,7 +251,7 @@ Za izračun impliciranega donosa moramo o obveznici poznati naslednje podake:
 \begin{itemize}
     \item Ceno po kateri lahko kupimo obveznico in natečene obresti, ki ji pripradajo,
     \item Pretvorjeno ceno in natečene obresti, ki jih bomo dobili ob izročitvi, 
-    \item Kupone, ki jih bomo dobili do izročivenega datuma,
+    \item Kupone, ki jih bomo dobili do izročitvenega datuma,
     \item Dobiček od reinvesticije kuponov od njihovega izplačila do datuma izročive.
 \end{itemize}
 
@@ -259,15 +259,15 @@ Za izračun impliciranega donosa moramo o obveznici poznati naslednje podake:
 implicirano stopnjo povračila in zato jih lahko zanemarimo. S tem dobimo naslednjo formulo:
 %
 $$ impliciran\:donos = \frac{donos}{strošek\:investicije} \times
-\frac{360}{dnevi\:do\:izročitve} $$
+\frac{360}{dnevi\:do\:izročitve}, $$
 %
-Kjer je donos razlika med prejetim izkupičkom ob izročitvenem datumu in stroškom investicije.
+kjer je donos razlika med prejetim izkupičkom ob izročitvenem datumu in stroškom investicije.
 Izkupiček je torej izročitvena cena terminske pogodbe (ne pozabimo upoštevati pretvorbenega 
-faktorja in natečenih obresti), kuponi, ki jih prejmemo in obresti od reinvesticije kuponov. 
+faktorja in natečenih obresti), kuponi, ki jih prejmemo in obresti od reinvesticije kuponov:
 %
-$$ izkupiček = pretvorjena\:cena + natečene\:obresti + kuponi + obresti $$
+$$ izkupiček = pretvorjena\:cena + natečene\:obresti + kuponi + obresti, $$
 %
-Kjer velja, da obresti ne poznamo točno, pač pa to ocenimo glede na tržne razmere. Pripomnimo
+kjer velja, da obresti ne poznamo točno, pač pa to ocenimo glede na tržne razmere. Pripomnimo
 še, da kupone reinvestiramo za toliko dni, kot mine med njihovim izplačilom in izročitvenim
 datumom in da to v formuli merimo kot delež leta (t.j. $360$ dni). 
 
@@ -313,7 +313,7 @@ in omogoča lažjo primerjavo.
 
     Strošek investicije je cena obveznice in plačane natečene obresti oz. $107 + 3,8904 = 110,8904$.
 
-    Zdaj končo lahko izračunamo impliciran donos:
+    Zdaj končno lahko izračunamo impliciran donos:
     %
     $$ impliciran\:donos = \frac{112,8385 - 110,8904}{110,8904} \times \frac{360}{82} 
     = 7,71\% $$
@@ -327,14 +327,14 @@ zagotavlja, da se lahko odloča vsaj glede naslednjih stvari:
 \begin{itemize}
     \item Odločiti se mora, katero izmed primernih obveznic bo izročil. Tej odločitvi v angleščini 
             rečemo \textit{quality/swap option}.
-    \item Izbere lahko, kater dan v izročitvenem mesecu bo izkoristil za dejansko izročitev
+    \item Izbere lahko, kateri dan v izročitvenem mesecu bo izkoristil za dejansko izročitev
             obveznice - \textit{timing option}.
-    \item Lahko si izbere, da obveznico preda pred ali po zaprtju borze; tako lahko izbere, če 
-            bo znana končna cena te pogodbe. Odločitev je pogosto znana pod imenom
-             \textit{wild card option}. 
+    \item Lahko si izbere, da obveznico preda pred ali po zaprtju borze; tako lahko izbere, ali bo 
+            znana končna cena pogodbe ob predaji. Odločitev je pogosto znana pod imenom
+            \textit{wild card option}. 
 \end{itemize}
 
-Zaradi teh odločitev dolga pozicija nikoli tekom pogodbe ne more vedeti točno katero obveznico bo
+Zaradi teh odločitev dolga pozicija nikoli tekom pogodbe ne more vedeti točno, katero obveznico bo
 dobila, niti ne pozna točnega datuma predaje.
 
 \subsubsection{Proces izročitve}
@@ -342,9 +342,9 @@ Ko se pogodba izteče (oz. si kratka stran izbere datum), prodajalca še vedno �
 izročitve. 
 
 Prvi dan (angl. \textit{position day}) mora do osme ure zvečer po chicaškem času sporočiti na 
-CBOT, da ima namen izročiti. 
+CBOT, da ima namen izvršiti pogodbo. 
 
-Drugi dan (angl. \textit{notice day}) si izbere katero obveznico bo predal. To odločitev mora 
+Drugi dan (angl. \textit{notice day}) si izbere, katero obveznico bo predal. To odločitev mora 
 sprejeti do štirinajste ure. CBOT potem pregleda vse potencialne kupce, izbere tistega, ki 
 ima odprto dolgo pozicijo najdlje in mu do šestnajste ure sporoči, da se bo pogodba izvršila. 
 
@@ -360,7 +360,7 @@ definirana malce drugačno hipotetično osnovno premoženje:
 \begin{itemize}
     \item \textit{za $10$-letno pogodbo:} je osnovno premoženje $10$-letna menica s $6$-procentno
             kuponsko obrestno mero in vrednostjo \textdollar$100.000$. Kratka stran lahko dostavi 
-            obveznico, ki ima ročnost med $6.5$ in $10$ leti od prvega v izročitvenem mesecu.
+            obveznico, ki ima ročnost med $6.5$ in $10$ leti od prvega dne v izročitvenem mesecu.
     \item \textit{za $5$-letno pogodbo:} je osnovno premoženje menica s $6$-procentno kuponsko 
             obrestno mero in vrednostjo \textdollar$100.000$, ki ima skupno ročnost vsaj $5$ let
             in $3$ mesece, od katere je preostalo vsaj $4$ leta in $2$ meseca.
